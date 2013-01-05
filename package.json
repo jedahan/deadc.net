@@ -1,0 +1,18 @@
+{ "name": "operator"
+, "version": "0.0.1"
+, "description": "a game of telephone"
+, "author": "Jonathan Dahan <jonathan@jedahan.com>"
+, "dependencies":
+  { "short":"1.7.x"
+  , "coffee-script": "1.1.x"
+  , "restify": "2.0.x"
+  , "mailgun": "0.4.x"
+  }
+, "engines": {
+    "node": "0.8.x",
+    "npm":  "1.1.x"
+  }
+, "scripts":
+  { "start": "coffee server"
+  }
+}

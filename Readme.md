@@ -1,0 +1,1 @@
+Operator is a game where you share links, one at a time to someone. See how far it goes.
