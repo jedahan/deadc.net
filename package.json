@@ -6,7 +6,7 @@
   { "short":"1.7.x"
   , "coffee-script": "1.1.x"
   , "restify": "2.0.x"
-  , "mailgun": "0.4.x"
+  , "postmark": "0.1.x"
   }
 , "engines": {
     "node": "0.8.x",

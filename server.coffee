@@ -4,22 +4,13 @@ short = require 'short'
 short.connect 'mongodb://localhost/short'
 
 restify = require 'restify'
-mailgun = require 'mailgun'
-
-mail = new Mailgun credentials.key
+postmark = require('postmark')(credentials.key)
 
 port = process.env.PORT or 8080
 domain = 'http://localhost'
 
-_shorten = (url) ->
-  short.generate url, length: 7, (error, shortURL) ->
-    if error
-      console.error error
-    else
-      return "#{domain}:#{port}/#{shortURL.hash}"
-
 server = restify.createServer()
-server.use restify.queryParser()
+server.use restify.bodyParser()
 server.use restify.fullResponse() # set CORS, eTag, other common headers
 
 # serve static site
@@ -27,10 +18,20 @@ server.get /index.html|screen.css|app.js|favicon.ico/, restify.serveStatic direc
 
 # email person a url
 server.post '/send', (req, res, next) ->
-  shortURL = _shorten req.params.url
-  sendText 'link@operator.mailgun.net', req.params.email, shortURL, shortURL, (err) ->
-    console.error err if err?
-  
+  short.generate req.params.url, length: 7, (error, shortURL) ->
+    if error
+      console.error error
+    else
+      tinyURL = "#{domain}:#{port}/#{shortURL.hash}"
+      postmark.send
+        "From": "jonathan@jedahan.com",
+        "To": req.params.email,
+        "Subject": tinyURL
+        "TextBody": "<a href=#{tinyURL}>#{tinyURL}</a>"
+      , (error, success) ->
+        console.error error if error?
+        res.send 'sent!'
+
 # unshorten a url
 server.get "/:hash", (req, res, next) ->
   short.retrieve req.params.hash, visitor: req.connection.remoteAddress, (error, shortURLObject) ->
@@ -38,7 +39,8 @@ server.get "/:hash", (req, res, next) ->
       console.error error
     else
       if shortURLObject
-        res.redirect shortURLObject.URL, 302
+        res.writeHead 302, 'Location': shortURLObject.URL
+        res.end()
       else
         res.send "URL not found!", 404
         res.end()
