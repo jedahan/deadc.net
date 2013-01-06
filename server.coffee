@@ -6,7 +6,7 @@ short.connect process.env.MONGOHQ_URL or 'mongodb://localhost/short'
 restify = require 'restify'
 postmark = require('postmark')(credentials.key)
 
-port = process.env.PORT or 8080
+port = process.env.PORT or 80
 domain = 'http://localhost'
 
 server = restify.createServer()
