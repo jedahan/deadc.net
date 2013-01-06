@@ -1,7 +1,7 @@
 credentials = require './credentials.json'
 
 short = require 'short'
-short.connect 'mongodb://localhost/short'
+short.connect process.env.MONGOHQ_URL or 'mongodb://localhost/short'
 
 restify = require 'restify'
 postmark = require('postmark')(credentials.key)
