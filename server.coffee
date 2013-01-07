@@ -7,7 +7,6 @@ restify = require 'restify'
 postmark = require('postmark')(credentials.key)
 
 port = process.env.PORT or 80
-domain = 'http://localhost'
 
 server = restify.createServer()
 server.use restify.bodyParser()
@@ -22,7 +21,7 @@ server.post '/send', (req, res, next) ->
     if error
       console.error error
     else
-      tinyURL = "#{domain}:#{port}/#{shortURL.hash}"
+      tinyURL = "#{server.address().address}:#{port}/#{shortURL.hash}"
       postmark.send
         "From": "jonathan@jedahan.com",
         "To": req.params.email,
