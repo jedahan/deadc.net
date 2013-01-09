@@ -1,0 +1,132 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Website starts here!
+*/
+.header { 
+ 	background-color: #fedb62;
+ 	width: 100%;
+ 	height: 360px;
+	text-align: center;
+	}
+.headwrapper {
+	padding-top: 50px;
+	width: 350px;
+	margin: auto;
+}
+.storywrapper {
+	padding-top: 50px;
+	width: 760px;
+	margin: auto;
+}
+.imagewrapper {
+	padding-top: 50px;
+	width: 760px;
+	margin: auto;
+}
+.contactwrapper {
+	padding-top: 50px;
+	width: 760px;
+	margin: auto;
+}
+.h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800; 
+	color:#333333;
+	font-size: 30px;
+	background-image: url('logo.svg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	/*border: 1px solid yellow;*/
+	padding-top: 75px;
+	line-height: 2.5;
+}
+.h2 {
+	font-family: 'Bitter', serif;
+	font-weight: 400;
+	line-height: 1.8;
+	color: #353535;
+	font-size: 16px;
+}
+.h3 {
+	font-family: arial;
+	font-weight: 600; 
+	color:#444444;
+	font-size: 20px;
+}
+.p{
+	font-family: Georgia;
+	font-size: 24px;
+	color:#444444;
+	padding-top: 30px;
+	line-height: 1.9;
+}	
+.break {
+	background-color: #d3d3d3;
+ 	width: 100%;
+ 	height: 1px;
+ 	margin-top: 33px;
+}
+.story { 
+ 	background-color: #eeeeee;
+ 	width: 100%;
+ 	text-align: left;
+	}
+.image { 
+ 	background-color: #f8f8f8;
+ 	width: 100%;
+ 	text-align: left;
+ 	/*padding-bottom: 50px;*/
+	}
+.imagepadding {
+	padding-bottom: 30px;
+}		
+.contact {
+	background-color: #eeeeee;
+ 	width: 100%;
+ 	text-align: left;
+ 	padding-bottom: 50px;
+
+}
+
