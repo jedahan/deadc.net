@@ -14,8 +14,8 @@
 
 <div class="header">
 	<div class="headwrapper">
-		<h1 class="h1">LINKSEY.IM</h1>
-		<h2 class="h2">What will your link transform into?</h2>
+		<h1 class="h1">WHISPR.TO</h1>
+		<!-- <h2 class="h2">What will your link transform into?</h2> -->
 </div>
 <div class="break"></div>
 <div class="story">
@@ -26,12 +26,20 @@
 <div class="break"></div>
 <div class="image">
 	<div class="imagewrapper">
-		<h3 class="h3">Will you share the same link?</h3>
-		<form>
-			Link: <input type="text" name="firstname"><br>
-			Email: <input type="text" name="lastname"><br>
-			<input type="submit" value="SUBMIT" />
-		</form>
+		<form action="/">
+	<fieldset>
+		<label for="url">Will you share the same link?</label>
+		<input type="url" id="url" class="form-text" placeholder="http://blog.jackcheng.com/post/25160553986/the-slow-web" />
+	</fieldset>
+	<form action="/">
+	<fieldset>
+		<label for="name">Who will you share it with?</label>
+		<input type="text" id="name" class="form-text" placeholder="Your friends email" />
+	</fieldset>
+	<fieldset class="form-actions">
+		<input type="submit" value="Submit" />
+	</fieldset>
+</form>		
 </div>
 <div class="break"></div>
 <div class="contact">
