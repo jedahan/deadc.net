@@ -45,4 +45,4 @@ server.get "/:hash", (req, res, next) ->
         res.end()
 
 server.listen port, ->
-  console.log "Server running on port #{port}"
+  console.log "#{server.name} listening at #{server.url}"
