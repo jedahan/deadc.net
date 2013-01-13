@@ -8,7 +8,7 @@ postmark = require('postmark')(credentials.key)
 
 port = process.env.PORT or 80
 
-server = restify.createServer()
+server = restify.createServer name: 'whispr'
 server.use restify.bodyParser()
 server.use restify.fullResponse() # set CORS, eTag, other common headers
 
