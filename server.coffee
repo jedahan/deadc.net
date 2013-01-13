@@ -13,7 +13,7 @@ server.use restify.bodyParser()
 server.use restify.fullResponse() # set CORS, eTag, other common headers
 
 # serve static site
-server.get /index.html|screen.css|app.js|favicon.ico/, restify.serveStatic directory: './static'
+server.get /index.html|style.css|app.js|favicon.ico/, restify.serveStatic directory: './static'
 
 # email person a url
 server.post '/send', (req, res, next) ->
