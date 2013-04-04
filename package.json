@@ -1,19 +1,15 @@
-{ "name": "operator"
-, "version": "0.0.1"
-, "description": "a game of telephone"
+{ "name": "deadc.net"
+, "version": "0.0.3"
+, "description": "one-hit link shortening service"
 , "author": "Jonathan Dahan <jonathan@jedahan.com>"
 , "contributors": "Vincent Iadevaia <vincentiadevaia@gmail.com>"
 , "dependencies":
-  { "short":"1.7.x"
-  , "coffee-script": "1.1.x"
-  , "restify": "2.0.x"
-  , "postmark": "0.1.x"
+  { "coffee-script": "~1.3.0"
+  , "restify": "~2.3.5"
+  , "short":"~1.7.0"
   }
 , "engines": {
-    "node": "0.8.x",
-    "npm":  "1.1.x"
-  }
-, "scripts":
-  { "start": "coffee server"
+    "node": "~0.10.3",
+    "npm":  "~1.2.15"
   }
 }
