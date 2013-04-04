@@ -1,5 +1,3 @@
-credentials = require './credentials.json'
-
 short = require 'short'
 short.connect process.env.MONGOHQ_URL or 'mongodb://localhost/short'
 
