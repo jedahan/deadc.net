@@ -46,7 +46,7 @@ table {
 /*Website starts here!
 */
 
-input[type="submit"]:hover { cursor: pointer; }
+input[type="button"]:hover { cursor: pointer; }
 
 a:link {color:#555555;}    
 a:visited {color:#555555;} 
@@ -153,7 +153,7 @@ form.url fieldset input[type="text"]:focus {
 form.url fieldset input[type="text"]:active {
 	background: #d9d9d9;
 	}				
-form.url fieldset input[type="submit"] {
+form.url fieldset input[type="button"] {
 	margin-left: 8px;
 	vertical-align: top;
 	width: 160px;
@@ -168,11 +168,11 @@ form.url fieldset input[type="submit"] {
 	outline: none;
 	border-style: none;
 	}
-form.url fieldset input[type="submit"]:hover,
-form.url fieldset input[type="submit"]:focus {
+form.url fieldset input[type="button"]:hover,
+form.url fieldset input[type="button"]:focus {
 	background: #888888;
 	}
-form.url fieldset input[type="submit"]:active {
+form.url fieldset input[type="button"]:active {
 	background: #888888;
 	}
 form.copy fieldset input[type="text"] {
@@ -194,7 +194,7 @@ form.copy fieldset input[type="text"]:focus {
 form.copy fieldset input[type="text"]:active {
 	background: #d9d9d9;
 	}				
-form.copy fieldset input[type="submit"] {
+form.copy fieldset input[type="button"] {
 	margin-top: 20px;
 	margin-left: 8px;
 	vertical-align: top;
@@ -210,11 +210,11 @@ form.copy fieldset input[type="submit"] {
 	outline: none;
 	border-style: none;
 	}
-form.copy fieldset input[type="submit"]:hover,
-form.copy fieldset input[type="submit"]:focus {
+form.copy fieldset input[type="button"]:hover,
+form.copy fieldset input[type="button"]:focus {
 	background: #e85e5e;
 	}
-form.copy fieldset input[type="submit"]:active {
+form.copy fieldset input[type="button"]:active {
 	background: #e85e5e;
 	}							
 dl dt {
