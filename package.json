@@ -2,6 +2,7 @@
 , "version": "0.0.1"
 , "description": "a game of telephone"
 , "author": "Jonathan Dahan <jonathan@jedahan.com>"
+, "contributors": "Vincent Iadevaia <vincentiadevaia@gmail.com>"
 , "dependencies":
   { "short":"1.7.x"
   , "coffee-script": "1.1.x"
