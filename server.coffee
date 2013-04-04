@@ -4,7 +4,6 @@ short = require 'short'
 short.connect process.env.MONGOHQ_URL or 'mongodb://localhost/short'
 
 restify = require 'restify'
-postmark = require('postmark')(credentials.key)
 
 port = process.env.PORT or 80
 
@@ -18,18 +17,7 @@ server.get /index.html|style.css|app.js|favicon.ico/, restify.serveStatic direct
 # email person a url
 server.post '/send', (req, res, next) ->
   short.generate req.params.url, length: 7, (error, shortURL) ->
-    if error
-      console.error error
-    else
-      tinyURL = "#{server.address().address}:#{port}/#{shortURL.hash}"
-      postmark.send
-        "From": "jonathan@jedahan.com",
-        "To": req.params.email,
-        "Subject": tinyURL
-        "TextBody": "<a href=#{tinyURL}>#{tinyURL}</a>"
-      , (error, success) ->
-        console.error error if error?
-        res.send 'sent!'
+    res.send error or "#{server.address().address}:#{port}/#{shortURL.hash}"
 
 # unshorten a url
 server.get "/:hash", (req, res, next) ->
