@@ -45,6 +45,9 @@ table {
 
 /*Website starts here!
 */
+
+input[type="submit"]:hover { cursor: pointer; }
+
 a:link {color:#555555;}    
 a:visited {color:#555555;} 
 a:hover {color:#777777;}   
@@ -106,11 +109,11 @@ a:active {color:#555555;}
 	padding-bottom: 20px;
 }
 .header { 
- 	height: 49px;
+ 	height: 39px;
 	text-align: left;
 	}
 .headwrapper {
-	padding-top: 15px;
+	padding-top: 13px;
 	width: 560px;
 	margin: auto;
 }
@@ -229,4 +232,19 @@ dl dd {
 	font-size: 13px;
 	line-height: 1.4;
 	padding-top: 20px;
-	}		
+	}	
+::-webkit-input-placeholder {
+   color: #222222;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #222222;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #222222;  
+}
+
+:-ms-input-placeholder {  
+   color: #222222;  
+}		
