@@ -15,7 +15,7 @@ server.use restify.fullResponse() # set CORS, eTag, other common headers
 server.get /\/|index.html|style.css|app.js|favicon.ico/, restify.serveStatic directory: './static', default: 'index.html'
 
 # email person a url
-server.post '/send', (req, res, next) ->
+server.post '/shorten', (req, res, next) ->
   short.generate req.params.url, length: 7, (error, shortURL) ->
     res.send error or "#{server.address().address}:#{port}/#{shortURL.hash}"
 
