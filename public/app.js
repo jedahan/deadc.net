@@ -1,8 +1,9 @@
 function getShort() {
-  console.log('getShort');
-  var url = qwery('#url')[0].value;
+  var url = document.getElementById('url').value;
+  console.log('getShort ' + url);
+
   reqwest('/shorten', {url: url}, function (res) {
-    qwery('#link')[0].value = res;
+    document.getElementById('link').value = res;
   })
   return false;
 }
