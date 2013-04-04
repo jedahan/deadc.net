@@ -8,6 +8,10 @@
     <meta name="description" content="DeadC.net lets you create one-click expiring links">
     <meta name="keywords" content="shortner, one-click, expiring, dead">
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="/components/qwery/qwery.min.js" />
+    <script src="/app.js" />
+    <script src="/components/reqwest/reqwest.min.js" />
   </head>
 
   <body>
@@ -22,15 +26,15 @@
 
   <div class="form">
     <h2 class="h2">Create a one-click expiring link</h2>
-    <form action="/" class="url">
+    <form action="#" class="url" onsubmit="getShort()">
       <fieldset>
-        <input type="text" placeholder="URL" />
+        <input type="text" placeholder="URL" id="url" />
         <input type="submit" value="Shorten" />
       </fieldset>
     </form>
-    <form action="/" class="copy">
+    <form action="#" class="copy">
       <fieldset>
-        <input type="text" placeholder="" readonly/>
+        <input type="text" placeholder="" readonly id="link"/>
         <input type="submit" value="Copy" />
       </fieldset>
     </form>
