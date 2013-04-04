@@ -9,9 +9,20 @@
     <meta name="keywords" content="shortner, one-click, expiring, dead">
     <link href="style.css" rel="stylesheet" type="text/css" />
 
-    <script src="/components/qwery/qwery.min.js"></script>
     <script src="/components/reqwest/reqwest.min.js"></script>
-    <script src="/app.js"></script>
+    <script>
+      var shorten = function() {
+        reqwest({
+            url: '/shorten'
+          , method: 'post'
+          , data: { url: document.getElementById('url').value }
+          , success: function (res) {
+              document.getElementById('link').value = window.location.host+'/'+res;
+              document.getElementById('link').select();
+            }
+        })
+      }
+    </script>
   </head>
 
   <body>
@@ -26,16 +37,16 @@
 
   <div class="form">
     <h2 class="h2">Create a one-click expiring link</h2>
-    <form action="#" class="url" onsubmit="getShort()">
+    <form class="url">
       <fieldset>
-        <input type="text" placeholder="URL" id="url" />
-        <input type="submit" value="Shorten" />
+        <input type="text" placeholder="URL" id="url"/>
+        <input type="button" value="Shorten" onclick="shorten()"/>
       </fieldset>
     </form>
     <form action="#" class="copy">
       <fieldset>
         <input type="text" placeholder="" readonly id="link"/>
-        <input type="submit" value="Copy" />
+        <input type="button" value="Copy" />
       </fieldset>
     </form>
   </div>

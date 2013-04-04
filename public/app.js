@@ -1,4 +1,4 @@
-function getShort() {
+var shorten = function() {
   var url = document.getElementById('url').value;
   console.log('getShort ' + url);
 
