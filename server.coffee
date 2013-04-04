@@ -10,7 +10,7 @@ server.use restify.bodyParser()
 server.use restify.fullResponse() # set CORS, eTag, other common headers
 
 # serve static site
-server.get /\/|index.html|components\/*|app.js|favicon.ico/, restify.serveStatic directory: './public', default: 'index.html'
+server.get /\/|index.html|components\/*|app.js|favicon.png/, restify.serveStatic directory: './public', default: 'index.html'
 
 # email person a url
 server.post '/shorten', (req, res, next) ->
