@@ -7,7 +7,7 @@ restify = require 'restify'
 
 port = process.env.PORT or 80
 
-server = restify.createServer name: 'whispr'
+server = restify.createServer name: 'deadc'
 server.use restify.bodyParser()
 server.use restify.fullResponse() # set CORS, eTag, other common headers
 
