@@ -1,14 +1,50 @@
-<!doctype html public "(づ｡◕o◕｡)づ">
+<!DOCTYPE html>
 
-<meta charset=utf-8>
-<title>slinky</title>
+<html>
 
-<link rel=stylesheet href=/screen.css />
+  <head>
+    <title>DeadC.net</title>
+    <Link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="DeadC.net lets you create one-click expiring links">
+    <meta name="keywords" content="shortner, one-click, expiring, dead">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<script src=/app.js></script>
+  <body>
 
-<form action='send' method='post'>
-  <input type="url" name="url" placeholder="http://example.com" autofocus required>
-  <input type="email" name="email" placeholder="friend@example.com" required>
-  <input type="submit" value="whisper">
-</form>
+  <div class="header">
+    <div class="headwrapper">
+      <h1 class="h1">DeadC.net</h1>
+    </div>
+  </div>
+
+  <hr class="break"/>
+
+  <div class="form">
+    <h2 class="h2">Create a one-click expiring link</h2>
+    <form action="/" class="url">
+      <fieldset>
+        <input type="text" placeholder="URL" />
+        <input type="submit" value="Shorten" />
+      </fieldset>
+    </form>
+    <form action="/" class="copy">
+      <fieldset>
+        <input type="text" placeholder="" readonly/>
+        <input type="submit" value="Copy" />
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="info">
+    <dl>
+      <dt>Why use this?</dt>
+      <dd>DeadC is the most private way to share links on the internet without being tracked.<br/>We're the James Bond of link shorteners. </dd>
+      <dt>Questions?</dt>
+      <dd>Talk to us <a href="http://twitter.com/deadclinks" target="_blank">@deadclinks</a></dd>
+    </dl>
+  </div>
+
+  </body>
+
+</html>
