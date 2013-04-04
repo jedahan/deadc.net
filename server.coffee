@@ -29,7 +29,7 @@ server.get "/:hash", (req, res, next) ->
         res.writeHead 302, 'Location': shortURLObject.URL
         res.end()
       else
-        res.send "URL not found!", 404
+        res.send new restify.NotFoundError "URL not found!"
         res.end()
 
 server.listen port, ->
