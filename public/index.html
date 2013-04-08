@@ -21,6 +21,7 @@
               document.getElementById('link').select();
             }
         })
+        return false;
       }
     </script>
   </head>
@@ -37,7 +38,7 @@
 
   <div class="form">
     <h2 class="h2">Create a one-click expiring link</h2>
-    <form class="url">
+    <form class="url" onsubmit="return shorten()">
       <fieldset>
         <input type="text" placeholder="URL" id="url"/>
         <input type="button" value="Shorten" onclick="shorten()"/>
