@@ -1,3 +1,4 @@
+/* Reset! */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,9 +44,7 @@ table {
 	border-spacing: 0;
 }
 
-/*Website starts here!
-*/
-
+/* Website starts here! */
 input[type="button"]:hover { cursor: pointer; }
 
 a:link {color:#555555;}    
@@ -61,17 +60,14 @@ a:active {color:#555555;}
  	border: none;
 }
 
-.h1 {
+.h1, .h2 {
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 800; 
 	color:#999999;
 	font-size: 13px;
 }
 .h2 {
-	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 400; 
-	color:#999999;
-	font-size: 13px;
 	padding-bottom: 20px;
 }
 .header { 
@@ -94,120 +90,93 @@ a:active {color:#555555;}
 	margin: auto;
 }
 
-form.url fieldset input[type="text"] {
+form fieldset input {
 	font-family: Helvetica, Arial, sans-serif;
+	border-radius: 4px;
+	outline: none;
+	border-style: none;
+}
+
+form fieldset input[type="text"] {
 	width: 337px;
 	height: 18px;
 	padding: 10px 14px;
 	font-size: 13px;
 	background: #bbbbbb;
-	border-radius: 4px;
-	outline: none;
-	border-style: none;
-	}
+}
+
 form.url fieldset input[type="text"]:hover,
-form.url fieldset input[type="text"]:focus {
-	background: #d9d9d9;
-	}
+form.url fieldset input[type="text"]:focus,
 form.url fieldset input[type="text"]:active {
 	background: #d9d9d9;
-	}				
-form.url fieldset input[type="button"] {
-	-webkit-appearance:none;
-	-webkit-border-radius:0;
+}
+
+form fieldset input[type="button"] {
 	margin-left: 8px;
 	vertical-align: top;
 	width: 160px;
 	height: 38px;
 	padding: 10px 14px;
-	font-family: Helvetica, Arial, sans-serif;
 	color: #ffffff;
 	font-size: 14px;
 	font-weight: 400;
 	background: #646464;
-	border-radius: 4px;
-	outline: none;
-	border-style: none;
-	}
+}
+
 form.url fieldset input[type="button"]:hover,
-form.url fieldset input[type="button"]:focus {
-	background: #888888;
-	}
+form.url fieldset input[type="button"]:focus,
 form.url fieldset input[type="button"]:active {
 	background: #888888;
-	}
-form.copy fieldset input[type="text"] {
+}
+
+form.copy fieldset input {
 	margin-top: 20px;
-	font-family: Helvetica, Arial, sans-serif;
-	width: 337px;
-	height: 18px;
-	padding: 10px 14px;
-	font-size: 13px;
-	background: #bbbbbb;
-	border-radius: 4px;
-	outline: none;
-	border-style: none;
-	}
+}
+
 form.copy fieldset input[type="text"]:hover,
-form.copy fieldset input[type="text"]:focus {
-	background: #d9d9d9;
-	}
+form.copy fieldset input[type="text"]:focus,
 form.copy fieldset input[type="text"]:active {
 	background: #d9d9d9;
-	}				
-form.copy fieldset input[type="button"] {
-	-webkit-appearance:none;
-	-webkit-border-radius:0;
-	margin-top: 20px;
-	margin-left: 8px;
-	vertical-align: top;
-	width: 160px;
-	height: 38px;
-	padding: 10px 14px;
-	font-family: Helvetica, Arial, sans-serif;
-	color: #ffffff;
-	font-size: 14px;
-	font-weight: 400;
-	background: #e44242;
-	border-radius: 4px;
-	outline: none;
-	border-style: none;
-	}
+}
+
 form.copy fieldset input[type="button"]:hover,
-form.copy fieldset input[type="button"]:focus {
-	background: #e85e5e;
-	}
+form.copy fieldset input[type="button"]:focus,
 form.copy fieldset input[type="button"]:active {
 	background: #e85e5e;
-	}							
-dl dt {
+}
+
+form.copy fieldset input[type="button"] {
+	background: #e44242;
+}
+
+form.url fieldset input[type="text"] {
+	color: #000000;
+}
+
+
+dl dt, dl dd {
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 800; 
 	color:#999999;
 	font-size: 13px;
 	line-height: 1.2;
 	padding-top: 20px;
-	}
+}
+
 dl dd {
-	font-family: Helvetica, Arial, sans-serif;
 	font-weight: 400; 
-	color:#999999;
-	font-size: 13px;
 	line-height: 1.4;
-	padding-top: 20px;
-	}	
+}
+
 ::-webkit-input-placeholder {
-   color: #222222;
+  color: #222222;
 }
-
-:-moz-placeholder { /* Firefox 18- */
-   color: #222222;  
+:-moz-placeholder {
+  color: #222222;
 }
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #222222;  
+::-moz-placeholder {
+  color: #222222;
 }
-
-:-ms-input-placeholder {  
-   color: #222222;  
-}		
+:-ms-input-placeholder {
+  color: #222222;
+}
