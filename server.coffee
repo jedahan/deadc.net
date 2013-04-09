@@ -16,7 +16,7 @@ server.post '/shorten', (req, res, next) ->
     res.send error or shortURL.hash
 
 # serve static site
-server.get /^\/$|404.html|index.html|favicon.png|style.css|components\/reqwest\/reqwest.min.js/, restify.serveStatic directory: './public', default: 'index.html', maxAge: 60*60*24*7
+server.get /^\/$|404.html|404.css|index.html|favicon.png|style.css|components\/reqwest\/reqwest.min.js/, restify.serveStatic directory: './public', default: 'index.html', maxAge: 60*60*24*7
 
 # unshorten a url
 server.get "/:hash", (req, res, next) ->
