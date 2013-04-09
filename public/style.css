@@ -45,7 +45,7 @@ table {
 }
 
 /* Website starts here! */
-input[type="button"]:hover { cursor: pointer; }
+input[type="submit"]:hover { cursor: pointer; }
 
 a:link {color:#555555;}    
 a:visited {color:#555555;} 
@@ -111,7 +111,7 @@ form.url fieldset input[type="text"]:active {
 	background: #d9d9d9;
 }
 
-form fieldset input[type="button"] {
+form fieldset input[type="submit"] {
 	margin-left: 8px;
 	vertical-align: top;
 	width: 160px;
@@ -123,9 +123,9 @@ form fieldset input[type="button"] {
 	background: #646464;
 }
 
-form.url fieldset input[type="button"]:hover,
-form.url fieldset input[type="button"]:focus,
-form.url fieldset input[type="button"]:active {
+form.url fieldset input[type="submit"]:hover,
+form.url fieldset input[type="submit"]:focus,
+form.url fieldset input[type="submit"]:active {
 	background: #888888;
 }
 
@@ -139,13 +139,13 @@ form.copy fieldset input[type="text"]:active {
 	background: #d9d9d9;
 }
 
-form.copy fieldset input[type="button"]:hover,
-form.copy fieldset input[type="button"]:focus,
-form.copy fieldset input[type="button"]:active {
+form.copy fieldset input[type="submit"]:hover,
+form.copy fieldset input[type="submit"]:focus,
+form.copy fieldset input[type="submit"]:active {
 	background: #e85e5e;
 }
 
-form.copy fieldset input[type="button"] {
+form.copy fieldset input[type="submit"] {
 	background: #e44242;
 }
 
