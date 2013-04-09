@@ -12,7 +12,9 @@ server.use restify.gzipResponse() # use compression if available
 
 # email person a url
 server.post '/shorten', (req, res, next) ->
-  short.generate req.params.url, length: 7, (error, shortURL) ->
+  url = req.params.url
+  url = 'http://' + url unless url.match('://')?
+  short.generate url, length: 7, (error, shortURL) ->
     res.send error or shortURL.hash
 
 files = ///
