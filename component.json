@@ -2,7 +2,8 @@
   "name": "deadc",
   "version": "0.0.5",
   "dependencies": {
-    "reqwest": "~0.6.4"
+    "reqwest": "~0.6.4",
+    "zeroclipboard": "~1.1.7
   },
   "main": [
     "index.html"

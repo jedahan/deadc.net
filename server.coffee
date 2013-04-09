@@ -15,8 +15,20 @@ server.post '/shorten', (req, res, next) ->
   short.generate req.params.url, length: 7, (error, shortURL) ->
     res.send error or shortURL.hash
 
+files = ///
+^/$        # root
+| 404\.html
+| 404\.css
+| index.html
+| style.css
+| favicon.png
+| components/reqwest/reqwest.min.js
+| components/zeroclipboard/ZeroClipboard.min.js
+| components/zeroclipboard/ZeroClipboard.swf
+///
+
 # serve static site
-server.get /^\/$|404.html|404.css|index.html|favicon.png|style.css|components\/reqwest\/reqwest.min.js/, restify.serveStatic directory: './public', default: 'index.html', maxAge: 60*60*24*7
+server.get files, restify.serveStatic directory: './public', default: 'index.html', maxAge: 60*60*24*7
 
 # unshorten a url
 server.get "/:hash", (req, res, next) ->

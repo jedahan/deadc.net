@@ -12,6 +12,7 @@
 
     <link href="style.css" rel="stylesheet" type="text/css" />
 
+    <script src="/components/zeroclipboard/ZeroClipboard.min.js"></script>
     <script src="/components/reqwest/reqwest.min.js"></script>
     <script>
       var shorten = function() {
@@ -50,7 +51,7 @@
     <form action="#" class="copy">
       <fieldset>
         <input type="text" placeholder="" readonly id="link"/>
-        <input type="submit" value="Copy" disabled/>
+        <input type="submit" value="Copy" data-clipboard-target="link" id="copy-button"/>
       </fieldset>
     </form>
   </div>
@@ -63,6 +64,17 @@
       <dd>Talk to us <a href="http://twitter.com/deadclinks" target="_blank">@deadclinks</a></dd>
     </dl>
   </div>
+
+  <script>
+    var clip = new ZeroClipboard( document.getElementById("copy-button"), {
+      moviePath: "/components/zeroclipboard/ZeroClipboard.swf"
+    });
+
+    clip.on('complete', function(client, args) {
+      this.text = 'Copied!'; // "this" is the element that was clicked
+      console.log("Copied text to clipboard: " + args.text );
+    } );
+  </script>
 
   </body>
 
