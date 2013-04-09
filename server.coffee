@@ -19,6 +19,7 @@ files = ///
 ^/$        # root
 | 404\.html
 | 404\.css
+| tomb.svg
 | index.html
 | style.css
 | favicon.png
