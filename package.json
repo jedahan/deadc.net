@@ -6,7 +6,7 @@
 , "dependencies":
   { "coffee-script": "~1.3.0"
   , "restify": "~2.3.5"
-  , "short":"~1.7.0"
+  , "short":"https://github.com/jedahan/short/tarball/master"
   }
 , "engines": {
     "node": "~0.10.3",
