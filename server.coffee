@@ -24,12 +24,8 @@ server.get "/:hash", (req, res, next) ->
     if error
       console.error error
     else
-      if shortURLObject
-        res.writeHead 302, 'Location': shortURLObject.URL
-        res.end()
-      else
-        res.send new restify.NotFoundError "URL not found!"
-        res.end()
+      res.writeHead 302, 'Location': shortURLObject?.URL or '404.html'
+      res.end()
 
 server.listen port, ->
   console.log "#{server.name} listening at #{server.url}"
