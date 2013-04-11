@@ -15,7 +15,10 @@ server.post '/shorten', (req, res, next) ->
   url = req.params.url
   url = 'http://' + url unless url.match('://')?
   short.generate url, length: 7, (error, shortURL) ->
-    res.send error or shortURL.hash
+    object =
+      hash: shortURL.hash
+      _links: self: href: "http://#{req.headers.host}/#{shortURL.hash}"
+    res.send error or object
 
 files = ///
 ^/$        # root

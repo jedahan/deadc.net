@@ -4,6 +4,12 @@
      Code is on http://github.com/jedahan/deadc.net
      Contact us through http://twitter.com/deadclinks
      Suggestions and bugreports are appreciated!
+
+     Developer who just wants to use the API? Can't promise it won't change, but try
+     # curl --request 'POST' 'http://deadc.net/shorten' --data 'url=http://example.com'
+     {"hash":"ZCthlpJ","_links":{"self":{"href":"http://localhost:5000/ZCthlpJ"}}}
+
+     Response will be hal+json
 -->
 
 <html>
@@ -24,10 +30,11 @@
       var shorten = function() {
         reqwest({
             url: '/shorten'
+          , type: 'json'
           , method: 'post'
           , data: { url: document.getElementById('url').value }
           , success: function (res) {
-              document.getElementById('link').value = window.location.host+'/'+res;
+              document.getElementById('link').value = res._links.self.href;
               document.getElementById('link').select();
             }
         })
