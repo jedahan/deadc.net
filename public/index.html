@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 
-<!-- Oh hai there. Code is on http://github.com/jedahan/deadc.net
+<!-- OHAI (づ｡◕o◕｡)づ
+     Code is on http://github.com/jedahan/deadc.net
      Contact us through http://twitter.com/deadclinks
-     Suggestions and bugreports are appreciated! -->
+     Suggestions and bugreports are appreciated!
+-->
 
 <html>
 
@@ -81,6 +83,20 @@
       this.text = 'Copied!'; // "this" is the element that was clicked
       console.log("Copied text to clipboard: " + args.text );
     } );
+  </script>
+
+  <!--
+  We don't record links, but we record visits. If you know of an analytics service
+  that respects user privacy more please tell us at http://twitter.com/deadclinks
+  -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40076702-1', 'deadc.net');
+    ga('send', 'pageview');
   </script>
 
   </body>
