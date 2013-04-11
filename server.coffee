@@ -31,7 +31,7 @@ files = ///
 ///
 
 # serve static site
-server.get files, restify.serveStatic directory: './public', default: 'index.html', maxAge: 60*60*24*7
+server.get files, restify.serveStatic directory: './public', default: 'index.html', maxAge: 60*60*24*7, charSet: 'utf-8'
 
 # unshorten a url
 server.get "/:hash", (req, res, next) ->
