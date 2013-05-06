@@ -106,6 +106,8 @@ form fieldset input {
 	border-radius: 4px;
 	outline: none;
 	border-style: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
 }
 
 form fieldset input[type="text"] {
